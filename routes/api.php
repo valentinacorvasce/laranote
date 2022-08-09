@@ -17,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Il prefisso di default del percorso è: /api/;
+Route::get('v1/prodotti', function () {
+    return response()->json([
+        'prodotto' => [
+            'codice' => '12345',
+            'descrizione' => 'Lorem Ipsum'
+        ]
+    ]);
+});
