@@ -1,14 +1,7 @@
 @extends('layout')
 
 @section('content')
-<!--SECTION 1-->
-<div class="hero py-5">
-    <h1 class="display-2 text-center my-5">SCRIVI LA TUA NOTA</h1>
-    <h2 class="text-center">Vuoi lasciare una nota epica per il futuro?</h2>
-    <div class="d-flex justify-content-center  my-5">
-        <button type="button" class="btn btn-warning register btn-lg">Registrati</button>
-    </div>
-</div>
+@include('partials._hero-home')
 
 <div class="row">
     @unless (count($contents) == 0)
@@ -31,7 +24,7 @@
                 <img src="images/default.jpeg" class="card-img-top rounded mx-auto d-block">
                 <p class="card-text">{{$content->content}}</p>
                 <p class="small">{{$content->author}}</p>
-                <p><em>{{$content->updated_at}}</em></p>
+                <p><em>{{$content->created_format}}</em></p>
                 <a href="/notes/{{$content->id}}" class="btn btn-success d-block my-btn"><i class="bi bi-book"></i>Leggi tutto </a>
             </div>
         </div>
