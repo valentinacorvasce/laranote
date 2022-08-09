@@ -23,10 +23,31 @@ Route::get('/', function () {
     ]);
 });
 
-// Route per mostrare la singola nota;
-Route::get('notes/{id}', function ($id) {
+// Route per mostrare la singola nota senza il controllo del dato non esistente;
+/* Route::get('notes/{id}', function ($id) {
     return view('note', [
         'note' => Note::find($id)
+    ]);
+}); */
+
+// Route per mostrare la singola nota con il controllo del dato non esistente;
+/* Route::get('notes/{id}', function ($id) {
+    $note = Note::find($id);
+
+    if ($note) {
+        return view('note', [
+            'note' => $note
+        ]);
+    } else {
+        abort('404');
+    }
+});
+ */
+
+// Route per mostrare singola nota attraverso il Binding del Modello;
+Route::get('notes/{note}', function (Note $note) {
+    return view('note', [
+        'note' => $note
     ]);
 });
 
