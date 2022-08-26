@@ -27,5 +27,11 @@ class Note extends Model
         if ($filters['tag'] ?? false) {
             $query->where('tags', 'like', '%' . request('tag') . '%');
         }
+
+        if ($filters['search'] ?? false) {
+            $query->where('title', 'like', '%' . request('search') . '%')
+                ->orwhere('content', 'like', '%' . request('search') . '%')
+                ->orwhere('tags', 'like', '%' . request('search') . '%');
+        }
     }
 }
