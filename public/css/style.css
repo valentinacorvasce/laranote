@@ -1,17 +1,20 @@
-body, html{
-    font-family: 'Montserrat' , sans-serif;
+body,
+html {
+    font-family: 'Montserrat', sans-serif;
 }
 
-.container-fluid, body, html{
+.container-fluid,
+body,
+html {
     margin: 0;
     padding: 0;
 }
 
-img{
+img {
     width: 25%;
 }
 
-.p-menu{
+.p-menu {
     font-size: 25px;
     color: #9F001A;
 }
@@ -21,39 +24,45 @@ i {
     color: #ccc;
 }
 
-.hero{
+.hero {
     background-color: #9F001A;
 
     color: #fff;
 }
 
-.register{
+.register {
     background-color: #FABF0C;
     color: #fff;
     border: none;
 }
 
-.register:hover{
+.register:hover {
     background-color: #9F001A;
 }
 
-.my-btn{
-    background-color:  #9F001A;
+.my-btn {
+    background-color: #9F001A;
     border: none;
 }
 
-.tags{
-    background-color:#FABF0C;
+.tags {
+    background-color: #FABF0C;
     border-radius: 20px;
     margin: 10px 5px;
 }
-.card-img-top{
+
+.card-img-top {
     width: 60%;
 }
 
-.img-edit{
+.img-edit {
     width: 10%
 }
-footer{
+
+footer {
     background-color: #9F001A;
+}
+
+.backG {
+    background-color: #ddd;
 }

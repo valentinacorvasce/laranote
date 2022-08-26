@@ -7,19 +7,10 @@
 <h5>{{$note['author']}}</h5>
 <h5>{{$note['content']}}</h5> -->
 <div class="d-md-inline-flex">
-    <div class="card m-5">
+    <x-cards class="backG">
         <div class="card-body">
             <h5 class="card-title">{{$note->title}}</h5>
-            <div>
-                <ul class="nav justify-content-center">
-                    <li class="nav-item tags">
-                        <a class="nav-link" href="à">react</a>
-                    </li>
-                    <li class="nav-item tags">
-                        <a class="nav-link" href="à">node</a>
-                    </li>
-                </ul>
-            </div>
+            <x-tags :tags="$note->tags" />
             <div><img src="{{asset('images/default.jpeg')}}" class="rounded float-start img-fluid mx-5"></div>
             <p class="small">{{$note->author}}</p>
             <p><em>{{$note->created_format}}</em></p>
@@ -36,7 +27,7 @@
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
+            </>
+    </x-cards>
 </div>
 @endsection

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->string('author')->nullable();
             $table->string('email')->nullable();
+            $table->string('tags')->nullable();
             $table->longText('content')->nullable();
             $table->timestamps();
         });
