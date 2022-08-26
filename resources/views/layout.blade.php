@@ -34,8 +34,8 @@
                             <a class="btn btn-primary btn-lg register" href="create.html" role="button"><i class="bi bi-plus-circle-fill"></i>NUOVA NOTA</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" aria-label="Search">
+                    <form class="d-flex" role="search" action="/">
+                        <input class="form-control me-2" type="search" aria-label="Search" name="search">
                         <button class="btn btn-outline-success" type="submit">Cerca</button>
                     </form>
                 </div>

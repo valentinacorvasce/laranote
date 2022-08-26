@@ -19,4 +19,13 @@ class Note extends Model
     }
 
     protected $appends = ['created_format'];
+
+
+    public function scopeFilter($query, array $filters)
+    {
+        // dd($filters);
+        if ($filters['tag'] ?? false) {
+            $query->where('tags', 'like', '%' . request('tag') . '%');
+        }
+    }
 }

@@ -20,6 +20,7 @@ class NoteFactory extends Factory
             'title' => $this->faker->sentence(),
             'author' => $this->faker->name(),
             'email' => $this->faker->companyEmail(),
+            'tags' => "web, laravel, php",
             'content' => $this->faker->paragraph(4)
         ];
     }
